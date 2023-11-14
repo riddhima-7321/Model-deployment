@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLASS CLASSIFICATION</title>
+</head>
+<body>
+    <div class="login">
+        <h1>GLASS CLASSIFICATION</h1>
+        <form action="{{url_for('predict')}}"method="post">
+            <input type="text" name="RI" placeholder="RI" required="'required" />
+            <input type="text" name="Na" placeholder="Na" required="'required" />
+            <input type="text" name="Mg" placeholder="Mg" required="'required" />
+            <input type="text" name="Al" placeholder="Al" required="'required" />
+            <input type="text" name="Si" placeholder="Si" required="'required" />
+            <input type="text" name="K" placeholder="K" required="'required" />
+            <input type="text" name="Ca" placeholder="Ca" required="'required" />
+            <input type="text" name="Ba" placeholder="Ba" required="'required" />
+            <input type="text" name="Fe" placeholder="'Fe" required="'required" />
+            <button type="submit" class="'bt btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+        <br>
+        {{prediction_text}}
+    </div>
+</body>
+</html>
