@@ -15,14 +15,6 @@ def predict():
     output=round(prediction[0],2)
 
     return render_template('index.html',prediction_text='Estimated weekly sales are {}'.format(output))
-
-@app.route('/predict_api',methods=['POST'])
-def predict_api():
-    data=request.get_json(force=True)
-    prediction=model.predict([np.array(list(data.values()))])
-
-    output=prediction[0]
-    return jsonify(output)
 if __name__ =='__main__':
     
     app.run(debug=True, port=5001)
